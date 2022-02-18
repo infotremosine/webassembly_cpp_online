@@ -2,4 +2,12 @@
 https://mbebenita.github.io/WasmExplorer/
 
 2 Write you code in c++ with some function for export
+something like this
+
+int myfunction(int i) {
+
+  return (int)i+2;
+}
+
+3
 
