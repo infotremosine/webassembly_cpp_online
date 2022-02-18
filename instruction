@@ -10,4 +10,16 @@ int myfunction(int i) {
 }
 
 3
+Compile and download WASM file like demo.wasm
 
+4
+For security reasons you need launch your pages from web server
+Install apache
+sudo apt install apache2
+Test apache localhost
+
+5 Copy test wasm inside folder /var/www/ of your website
+
+sudo cp test.wasm /var/wwww/
+
+6
