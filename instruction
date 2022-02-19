@@ -28,8 +28,27 @@ Inspect, Console
 
 fetch('test.wasm').then(res=>res.arrayBuffer()).then(buf=>WebAssembly.instantiate(buf))
 After promise fulfilled
-Then make it "Store as global variable" 
+Then make it promise,object or object.instance "Store as global variable" 
 temp0
 
 
 temp2.instance.exports._Z10myfunctioni(39)
+temp0.exports._Z10myfunctioni(5)
+
+run, output result must be +2 of inserted value.
+
+
+
+
+
+
+
+
+
+
+links
+https://www.youtube.com/watch?v=HktWin_LPf4
+https://www.youtube.com/watch?v=6v4E6oksar0
+https://www.youtube.com/watch?v=bac0dGQbUto
+
+
