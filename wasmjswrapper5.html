@@ -1,0 +1,84 @@
+<html>
+<head>
+<script>
+
+///////////////////////////////////////////////////////////////
+
+
+var importObject = {
+  imports: { imported_func: arg => console.log(arg) }
+};
+
+const myfunction5 = async function(x, y) {
+const response = await fetch("test5.wasm");
+const buffer = await response.arrayBuffer();
+const obj = await WebAssembly.instantiate(buffer);
+console.log("init web assembly"); 
+console.log(obj.instance.exports);
+console.log(obj.instance.exports._Z12testFunctionii(1,4));
+console.log(obj.instance.exports._Z12testFunctionii(2,4));
+//_Z12testFunctionii
+
+  return [obj];
+
+}
+
+
+
+
+const start5 = async function(a, b) {
+  const result = await myfunction5(2, 3);
+
+  console.log(result);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+start5();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</head>
+<body>
+
+web assembly 
+wrapper for cpp function
+
+
+int testFunction(int* input, int length) {
+  int sum = 0;
+  for (int i = 0; i < length; ++i) {
+    sum += input[i];
+  }
+  return sum;
+}
+
+</body>
+</html>
