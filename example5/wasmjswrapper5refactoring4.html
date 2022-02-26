@@ -1,0 +1,235 @@
+<html>
+<head>
+    <title>How to Append HTML Code and Wasm code to a Div using Javascript</title>
+    <style>
+        body {
+            text-align: center;
+              
+            padding: 5%;
+        }
+        h1{
+            color:green;
+        }
+    </style>
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+///////////////////////////////////////////////////////////////
+
+
+var importObject = {
+  imports: { imported_func: arg => console.log(arg) }
+};
+
+const myfunction5 = async function(x, y) {
+const response = await fetch("test5.wasm");
+const buffer = await response.arrayBuffer();
+const obj = await WebAssembly.instantiate(buffer);
+console.log("init web assembly"); 
+console.log("console.log(obj.instance.exports)");
+console.log(obj.instance.exports);
+
+
+
+console.log("1 times 4");
+console.log("console.log(obj.instance.exports._Z12testFunctionii(1,4))");
+console.log(obj.instance.exports._Z12testFunctionii(1,4));
+
+console.log("2 times 14");
+console.log("console.log(obj.instance.exports._Z12testFunctionii(2,14))");
+console.log(obj.instance.exports._Z12testFunctionii(2,14));
+//_Z12testFunctionii
+
+
+
+          document.getElementById("add_to_me").innerHTML +=
+              "<h3>This is the text which has been inserted by JS start5 parser function</h3>";
+          
+
+return[obj];
+}
+const start5 = async function(a, b) {
+  const result = await myfunction5(2, 3);
+  console.log(result);
+
+console.log("console.log(result[0].instance.exports._Z12testFunctionii(1,4));");
+console.log(result[0].instance.exports._Z12testFunctionii(1,4));
+console.log("console.log(result[0].instance.exports._Z12testFunctionii(2,4));");
+console.log(result[0].instance.exports._Z12testFunctionii(2,4));
+
+var one = Math.floor(Math.random() * 10);
+var two = Math.floor(Math.random() * 10);
+//Math.floor(Math.random() * 10) returns a random integer between 0 and 9 (both included):
+
+     document.getElementById("add_to_me").innerHTML +=
+result[0].instance.exports._Z12testFunctionii(one,two);
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//start5();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</head>
+<body>
+   <canvas id='canvas' width='210' height='297'></canvas>
+
+
+
+
+
+
+
+
+
+
+
+web assembly 
+wrapper for cpp function
+
+
+int testFunction(int* input, int length) {
+  int sum = 0;
+  for (int i = 0; i < length; ++i) {
+    sum += input[i];
+  }
+  return sum;
+}
+ <div id="add_to_me">
+        <h1>GeeksforGeeks</h1>
+        <p>This is the text which has already been typed into the div</p>
+    </div>
+  
+
+
+
+
+
+    
+
+	<button onclick="addCode()">Add Stuff</button>
+	<script>
+		function addCode() {
+	//		document.getElementById("add_to_me").innerHTML +=
+	//		"<h3>This is the text which has been inserted by JS</h3>"+Math.floor(Math.random() * 100) + 1;
+           document.getElementById("add_to_me").innerHTML =
+			"<h3>This is the text which has been inserted by JS</h3>"+Math.floor(Math.random() * 100) + 1;
+     
+        addBars();
+                                    }
+              
+    
+    function mr(){
+        var x=Math.floor(Math.random() * 100) + 1;
+        return x;
+    }
+    
+    
+    function addBars()
+                {
+                     //Math.floor(Math.random() * 100) + 1;
+    var ctx = document.getElementById("canvas").getContext("2d");
+   //   var context = canvas.getContext('2d');
+//ontext.clearRect(0, 0, context.canvas.width, context.canvas.height);
+//context.beginPath();
+
+
+//canvas = document.getElementById("canvas");
+ctx = canvas.getContext("2d");
+ctx.clearRect(0, 0, canvas.width, canvas.height);
+	
+// #rect31
+	ctx.beginPath();
+	ctx.fillStyle = 'rgb(0, 0, 255)';
+	ctx.lineWidth = 0.031775;
+	ctx.rect(21.717390, 12.326087, mr(), 24.065207);
+	ctx.fill();
+	
+// #rect33
+	ctx.beginPath();
+	ctx.fillStyle = 'rgb(194, 0, 83)';
+	ctx.lineWidth = 0.056911;
+	ctx.rect(21.717390, 36.391293, mr(), 22.304342);
+	ctx.fill();
+	
+// #rect1555
+	ctx.beginPath();
+	ctx.fillStyle = 'rgb(194, 195, 220)';
+	ctx.lineWidth = 0.074566;
+	ctx.rect(21.717390, 58.695633, mr(), 22.891319);
+	ctx.fill();
+	
+// #rect1557
+	ctx.beginPath();
+	ctx.fillStyle = 'rgb(136, 0, 210)';
+	ctx.lineWidth = 0.065609;
+	ctx.rect(22.891294, 103.304320, 76.304352, 37.565216);
+	ctx.fill();
+
+start5();
+                }
+                
+                
+                
+		
+	</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
